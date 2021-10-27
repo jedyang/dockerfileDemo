@@ -16,6 +16,7 @@ LABEL maintainer="yunsheng"
 # 从上一个阶段复制jar包
 COPY --from=jarBuilder /app/target/*.jar /app.jar
 
+# docker run -e JAVA_OPTS="-Xmx4g -Xms4g" -e APP_PARAMS="--spring.application.name=test"
 # jvm参数
 ENV JAVA_OPTS=""
 # spring可设置的应用参数
